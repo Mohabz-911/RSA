@@ -89,9 +89,9 @@ def decipher(ciphertext):
 
     return out
 
-plaintext = "mohabfathisalemku"
-p, q, n, phi, e, d = generate_key()
-c = cipher(plaintext)
-back = decipher(c)
+# plaintext = "mohabfathisalemku"
+# p, q, n, phi, e, d = generate_key()
+# c = cipher(plaintext)
+# back = decipher(c)
 
-print(back)
+# print(back)
