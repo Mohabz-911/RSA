@@ -74,16 +74,16 @@ def generate_key():
 
     return p, q, n, phi, e, d
 
-def cipher(plaintext):
+def cipher(plaintext, e, n):
     m_arr = encode(plaintext)
     c = []
     for x in m_arr:
         c.append(pow(x, e, n))
     return c
 
-def decipher(ciphertext):
+def decipher(ciphertext, d, n):
     codes = []
-    for x in c:
+    for x in ciphertext:
         codes.append(pow(x, d, n))
     out = decode(codes)
 
