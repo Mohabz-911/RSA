@@ -67,7 +67,7 @@ def generate_key():
     q = number.getPrime(512)
     n = p * q
     phi = (p-1)*(q-1)
-    e = number.getPrime(10)
+    e = number.getPrime(512)
     while math.gcd(e,phi) != 1:
         e = number.getPrime(512)
     d = pow(e, -1, phi)
