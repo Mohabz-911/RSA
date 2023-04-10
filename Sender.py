@@ -1,8 +1,8 @@
 import RSA
-# first of all import the socket library
 import socket			
+KEY_SIZE = 512
 
-p, q, n, phi, e, d = RSA.generate_key()
+p, q, n, phi, e, d = RSA.generate_key(KEY_SIZE)
 
 # next create a socket object
 s = socket.socket()		

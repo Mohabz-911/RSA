@@ -2,6 +2,7 @@ import math
 import random
 from Crypto.Util import number
 base = 37
+KEY_SIZE = 512
 
 
 #Divides the input message into packets (5 characters each)
@@ -62,14 +63,14 @@ def decode(encoded_message):
         message = message + decrypt_message(ct)
     return message
 
-def generate_key():
-    p = number.getPrime(512)
-    q = number.getPrime(512)
+def generate_key(k):
+    p = number.getPrime(k)
+    q = number.getPrime(k)
     n = p * q
     phi = (p-1)*(q-1)
-    e = number.getPrime(512)
+    e = number.getPrime(k)
     while math.gcd(e,phi) != 1:
-        e = number.getPrime(512)
+        e = number.getPrime(k)
     d = pow(e, -1, phi)
 
     return p, q, n, phi, e, d
