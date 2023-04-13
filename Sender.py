@@ -1,5 +1,5 @@
 import RSA
-import socket			
+import socket
 KEY_SIZE = 512
 
 p, q, n, phi, e, d = RSA.generate_key(KEY_SIZE)
